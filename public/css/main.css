@@ -1,8 +1,65 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
+/* Global Styles */
 
 body {
     background-color: black;
+    color: #ffffff;
+}
+
+/* Header Styles */
+
+.link-header,
+.sub-main-title,
+.main-title-page {
+    color: #ffffff;
+}
+
+/* Content Styles */
+/* Main */
+.layer-back-page {
+    background-image: url("../images/layer-base.png");
+    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+}
+
+.layer-center-page {
+    background-image: url("../images/layer-middle.png");
+}
+
+.layer-page-front {
+    background-image: url("../images/layer-front.png");
+}
+
+.main-content {
+    position: relative;
+}
+
+.top-images {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+/* Sub-Content */
+.main-sub-content {
+    background-image: url("../images/dungeon.jpg");
+    min-height: 100vh;
 }

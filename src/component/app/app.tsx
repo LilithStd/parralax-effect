@@ -1,9 +1,10 @@
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Main from "../../pages/main/main";
 
 function App() {
   return (
     <Routes>
-      <Route/>
+      <Route path="/" element={<Main />} />
     </Routes>
   );
 }
