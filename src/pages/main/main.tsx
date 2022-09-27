@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { animateScroll } from 'react-scroll';
 
 import Header from "../../component/header/header";
 function Main() {
@@ -18,20 +19,23 @@ function Main() {
   }, [])
 
   return (
-    <>
+
+    <div className="main-wrapper" onScroll={() => {
+      animateScroll.getAnimationType({ smooth: true })
+    }}>
       <Header />
       <div className="main-content">
         <section className="top-images">
           <div className="title-container">
-            <h2 className="sub-main-title">Sub Main Title</h2>
-            <h2 className="main-title-page">Title Pages</h2>
+            <h2 className="title-content sub-main-title">Sub Main Title</h2>
+            <h2 className="title-content main-title-page">Title Pages</h2>
           </div>
           <div className="layer layer-back-page"></div>
           <div className="layer layer-center-page"></div>
           <div className="layer layer-page-front"></div >
         </section >
       </div>
-      <article className="main-sub-content">
+      <article className="main-sub-content-page-1">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolor facere repellat soluta voluptatum expedita tenetur corrupti ad! Aperiam, quo! Culpa, quia quasi blanditiis nostrum quidem debitis dolore voluptatem aliquam.
           Eum deleniti facere aliquam tempora rem impedit amet modi voluptatum aliquid, vitae fugit ipsa, placeat omnis dolorem neque voluptas dolores labore error? Nostrum, et veritatis exercitationem magnam labore molestiae pariatur?
           Ea asperiores impedit cum, esse eligendi eius, delectus alias repellendus magnam consequuntur eum quibusdam, voluptates facere nisi ab voluptas architecto. Error atque accusamus unde officiis porro voluptate quo facilis laborum?
@@ -48,7 +52,14 @@ function Main() {
           Deleniti placeat explicabo nihil sapiente vero non cupiditate saepe quidem quo assumenda dolorem dolor libero corporis, aspernatur asperiores itaque voluptatem voluptatum laudantium ipsam. Ullam fugiat soluta similique ex neque molestiae?
           Cumque repellat nemo eum perspiciatis sint laudantium, odit cupiditate nobis sit ipsam velit. Autem libero, corrupti amet aliquam eos quo ut vel expedita esse veniam ipsam ullam alias eaque sunt.</p>
       </article>
-    </>
+      <article className="main-sub-content-page-2">
+        <div className="sub-content-page-2-images">
+          <div className="layer layer-back-page-2"></div>
+          <div className="layer layer-front-page-2"></div>
+        </div>
+      </article>
+    </div>
+
   );
 }
 

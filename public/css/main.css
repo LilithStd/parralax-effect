@@ -5,6 +5,9 @@
 }
 
 /* Global Styles */
+:root {
+    --index: 1vw + 1vh;
+}
 
 body {
     background-color: black;
@@ -12,30 +15,60 @@ body {
 }
 
 /* Header Styles */
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    gap: 50px;
+}
 
+.nav-link-item {
+    list-style-type: none;
+}
+
+
+/* Content Styles */
+/* Main */
 .link-header,
 .sub-main-title,
 .main-title-page {
     color: #ffffff;
 }
 
-/* Content Styles */
-/* Main */
 .layer-back-page {
     background-image: url("../images/layer-base.png");
-    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+    z-index: 0;
 }
 
 .layer-center-page {
     background-image: url("../images/layer-middle.png");
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+    z-index: 2;
 }
 
 .layer-page-front {
     background-image: url("../images/layer-front.png");
+    transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+    z-index: 2;
 }
 
 .main-content {
     position: relative;
+}
+
+.main-content::after {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: calc(var(--index) * 10);
+    background-image: url("../images/ground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: calc(var(--index) * -4.5);
 }
 
 .top-images {
@@ -54,12 +87,51 @@ body {
     position: absolute;
     background-size: cover;
     background-position: center;
-
+    will-change: transform;
 }
 
+.title-container {
+    z-index: 1;
+    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    will-change: transform;
+    margin-top: calc(var(--index) * -0.25);
+}
+
+.main-title-page {
+    font-size: calc(var(--index) * 2.5);
+    letter-spacing: calc(var(--index) / 3.55);
+}
+
+.sub-main-title {
+    font-size: calc(var(--index) / 1.5);
+    letter-spacing: calc(var(--index) / 5.55);
+}
+
+.title-content {
+    text-shadow: 0 0 20px rgb(238, 148, 45);
+}
 
 /* Sub-Content */
-.main-sub-content {
+.main-sub-content-page-1 {
     background-image: url("../images/dungeon.jpg");
     min-height: 100vh;
+    background-size: cover;
+}
+
+.main-sub-content-page-2 {
+    margin-top: calc(var(--index) * -0.25);
+}
+
+.layer-back-page-2 {
+    background-image: url("../images/sub-content-page-2/sub-content-page-2-back.png");
+    transform: translate3d(0, calc(var(--scrollTop) / 1.6), -300);
+    margin-top: calc(var(--index) * -0.25);
+    z-index: 0;
+}
+
+.layer-front-page-2 {
+    background-image: url("../images/sub-content-page-2/sub-content-page-2-middle.png");
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 50);
+    margin-top: calc(var(--index) * -0.25);
+    z-index: 2;
 }

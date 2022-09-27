@@ -1,11 +1,23 @@
+import { Link } from 'react-scroll';
+
 function Header() {
     return (
         <ul className="nav-link">
-            <li className="nav-link-item link-header">1</li>
-            <li className="nav-link-item link-header">2</li>
-            <li className="nav-link-item link-header">3</li>
-            <li className="nav-link-item link-header">4</li>
-            <li className="nav-link-item link-header">5</li>
+            <li className="nav-link-item link-header">
+                One place
+            </li>
+            <li className="nav-link-item link-header">
+                Two place
+            </li>
+            <li className="nav-link-item link-header">
+                Three place
+            </li>
+            <li className="nav-link-item link-header">
+                Four place
+            </li>
+            <li className="nav-link-item link-header">
+                Five Place
+            </li>
         </ul>
     );
 }
