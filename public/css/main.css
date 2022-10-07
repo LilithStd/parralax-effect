@@ -64,7 +64,7 @@ body {
     z-index: 100;
     width: 100%;
     height: calc(var(--index) * 10);
-    background-image: url("../images/ground.png");
+    background-image: url("../images/pngwing_00000.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -116,22 +116,46 @@ body {
     background-image: url("../images/dungeon.jpg");
     min-height: 100vh;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    /*text-align: center;*/
+    justify-content: center;
+
 }
 
-.main-sub-content-page-2 {
-    margin-top: calc(var(--index) * -0.25);
+.sub-title-container    {
+    text-align: center;
+    align-items: center;
 }
 
-.layer-back-page-2 {
-    background-image: url("../images/sub-content-page-2/sub-content-page-2-back.png");
-    transform: translate3d(0, calc(var(--scrollTop) / 1.6), -300);
-    margin-top: calc(var(--index) * -0.25);
-    z-index: 0;
+.sub-title-content  {
+    text-transform: uppercase;
+    font-size: calc(var(--index) * 1.8);
+    letter-spacing: calc(var(--index) / 20);
+    transform: translate3d(0, calc(var(--scrollTop) / 16), 0);
+    will-change: transform;
 }
 
-.layer-front-page-2 {
-    background-image: url("../images/sub-content-page-2/sub-content-page-2-middle.png");
-    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 50);
-    margin-top: calc(var(--index) * -0.25);
-    z-index: 2;
+.sub-content-text   {
+    max-width: calc(var(--index) * 70);
+    font-size: calc(var(--index) * .3);
+    /*letter-spacing: calc(var(--index) / 7);*/
+    transform: translate3d(0, calc(var(--scrollTop) / 16), 0);
+    will-change: transform;
+}
+
+.sub-content-frame  {
+    background-image: url("../images/sub-content-page-1/sub_frame_content_dark.png");
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.sub-content-bottom-forest  {
+    background-image: url("../images/layer-front.png");
+}
+
+.main-sub-content-page-2 {}
+
+.sub-content-page-2-images {
+    overflow: hidden;
 }
